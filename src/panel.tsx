@@ -1,4 +1,5 @@
-import React, { Fragment, ReactElement, useEffect, useState } from 'react';
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
+import React, { Fragment, ReactChildren, ReactElement, useEffect, useState } from 'react';
 import { STORY_CHANGED, STORY_RENDERED } from '@storybook/core-events';
 import { ImageConfig } from 'storybook-addon-designs/lib/config';
 // @ts-ignore
@@ -26,16 +27,18 @@ function getPanels(config: ImageConfig | ImageConfig[]): [ReactElement, { id: st
             title: cfg.name || '',
         };
         
-        return [<ImagePreview config={ cfg }/>, meta];
+        return [<ImagePreview key={ meta.id } config={ cfg }/>, meta];
     });
 }
 
-function PlaceholderMessage(props: any): ReactElement {
+function PlaceholderMessage(props: {
+    children: ReactChildren;
+}): ReactElement {
     return (
         <Placeholder>
             <Fragment { ...props }/>
         </Placeholder>
-    )
+    );
 }
 
 export default function FigmaPanel({ api, active, channel }: Props): ReactElement {

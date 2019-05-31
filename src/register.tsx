@@ -5,7 +5,7 @@ import FigmaPanel from './panel';
 import { constants } from './typings';
 
 addons.register(constants.ADDON_NAME, api => {
-    const render = ({ active, key }: { active: boolean, key: string }) => (
+    const render = ({ active, key }: { active: boolean; key: string }) => (
         <FigmaPanel api={ api }
             key={ key }
             channel={ addons.getChannel() }

@@ -1,6 +1,7 @@
 # Description
 
-Figma storybook addon to embed private and public figma projects
+Figma storybook addon to embed private and public figma projects.
+This addon was designed and tested only in a react environment.
 
 # Installation
 
