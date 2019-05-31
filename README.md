@@ -26,14 +26,13 @@ npm i @dreipol/storybook-figma-addon storybook-addon-designs -D
     }));
     ```
 3. Use it in your component stories
-    ```jsx
+    ```js
    stories.add(
         'Default',
         () => <ComponentExample/>,
         {
             // one or more figma image ids concatenated via commas
             figma: { ids: '14%3A160,45%3A1939' },
-            notes: { markdown },
         },
     );
     ```
