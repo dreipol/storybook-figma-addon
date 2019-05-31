@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
-import React, { Fragment, ReactChildren, ReactElement, useEffect, useState } from 'react';
+import React, { Fragment, ReactElement, useEffect, useState } from 'react';
 import { STORY_CHANGED, STORY_RENDERED } from '@storybook/core-events';
 import { ImageConfig } from 'storybook-addon-designs/lib/config';
 // @ts-ignore
@@ -20,20 +20,18 @@ interface Props {
     channel: Channel;
 }
 
-function getPanels(config: ImageConfig | ImageConfig[]): [ReactElement, { id: string; title: string }][] {
+function getPanels(config: ImageConfig | ImageConfig[], names: string[]): [ReactElement, { id: string; title: string }][] {
     return [...(Array.isArray(config) ? config : [config])].map((cfg, i) => {
         const meta = {
             id: `${ constants.ADDON_NAME }-${ i }`,
-            title: cfg.name || '',
+            title: names[i] || cfg.name || '',
         };
         
         return [<ImagePreview key={ meta.id } config={ cfg }/>, meta];
     });
 }
 
-function PlaceholderMessage(props: {
-    children: ReactChildren;
-}): ReactElement {
+function PlaceholderMessage(props: any): ReactElement {
     return (
         <Placeholder>
             <Fragment { ...props }/>
@@ -44,6 +42,7 @@ function PlaceholderMessage(props: {
 export default function FigmaPanel({ api, active, channel }: Props): ReactElement {
     const [config, setConfig] = useState<ImageConfig | ImageConfig[]>();
     const [hasImages, setHasImages] = useState();
+    const [imageNames, setNames] = useState();
     const [apiConfig, setApiConfig] = useState<{
         apiToken: string;
         projectID: string;
@@ -63,9 +62,10 @@ export default function FigmaPanel({ api, active, channel }: Props): ReactElemen
                 return;
             }
             
-            const { ids } = params;
+            const { ids, names } = params;
             
             if (ids && apiConfig) {
+                setNames(names || []);
                 const cfg = await loadFigmaImagesByIDs(ids, apiConfig.projectID, apiConfig.apiToken);
                 
                 setConfig(cfg);
@@ -95,7 +95,7 @@ export default function FigmaPanel({ api, active, channel }: Props): ReactElemen
         return <PlaceholderMessage>Loading designs...</PlaceholderMessage>;
     }
     
-    const panels = getPanels(config);
+    const panels = getPanels(config, imageNames);
     
     return (
         <TabsState key={ storyId } absolute={ true } initial={ panels[0][1].id }>

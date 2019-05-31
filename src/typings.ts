@@ -14,9 +14,8 @@ export interface FigmaImage {
 }
 
 export interface DecoratorParams {
-    ids?: string;
-    apiToken: string;
-    projectID: string;
+    ids: string;
+    names?: string[];
 }
 
 export enum constants {
