@@ -10,11 +10,15 @@
         "lib",
         "register.js"
     ],
-    "author": "Gianluca Guarini <gianluca.guarini@gmail.com> (http://gianlucaguarini.com)",
+    "author": "Dreipol <dev@dreipol.ch> (http://dreipol.ch)",
     "license": "MIT",
-    "devDependencies": {
+    "dependencies": {
         "@storybook/components": "^5.0.11",
         "@storybook/core-events": "^5.0.11",
+        "lodash": "^4.17.11",
+        "@storybook/addons": "^5.0.0"
+    },
+    "devDependencies": {
         "@types/lodash": "^4.14.132",
         "@types/node": "^12.0.3",
         "@types/react": "^16.8.19",
@@ -25,11 +29,7 @@
         "typescript": "^3.4.5"
     },
     "peerDependencies": {
-        "@storybook/addons": "^5.0.0",
         "storybook-addon-designs": "^5.1.0",
-        "@storybook/components": "^5.0.0",
-        "@storybook/theming": "^5.0.0",
-        "react": ">=16.8.0",
-        "lodash": "^4.17.11"
+        "react": ">=16.8.0"
     }
 }

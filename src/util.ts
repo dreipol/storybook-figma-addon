@@ -23,14 +23,16 @@ async function fetchImages(token: string, url: string) {
 
 // Load asynchronously figma images by id
 export const loadFigmaImagesByIDs = memoize(async (ids: string, projectId: string, apiToken: string): Promise<FigmaImage[] | never> => {
-    const figmaProjectId = projectId;
+    if (!projectId) {
+        throw new Error('The figma project id was not set.');
+    }
     
-    if (!figmaProjectId) {
-        throw new Error('The figma project id was not set. You can either pass it to this function or set in via "FIGMA_PROJECT_ID" in your environment variables');
+    if (!apiToken) {
+        throw new Error('Your figma api token was not set.');
     }
     
     // curry the file image api endpoint
-    const imagesEndpointWithProjectID = curry(fileImage)(figmaProjectId);
+    const imagesEndpointWithProjectID = curry(fileImage)(projectId);
     // curry the fetch method
     const fetchImagesWithToken = curry(fetchImages)(apiToken);
     const loadImagesByIDs = compose(fetchImagesWithToken, imagesEndpointWithProjectID);

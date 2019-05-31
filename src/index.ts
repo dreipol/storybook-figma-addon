@@ -1,11 +1,10 @@
 import { constants } from './typings';
 import addons, { makeDecorator, StoryWrapper } from '@storybook/addons';
 
-const wrapper: StoryWrapper = (getStory, context, { parameters, options }) => {
+const wrapper: StoryWrapper = (getStory, context, { options }) => {
     const channel = addons.getChannel();
-    const storyOptions = parameters || options;
     
-    channel.emit(constants.UPDATE_CONFIG_EVENT, storyOptions.figma || storyOptions);
+    channel.emit(constants.UPDATE_CONFIG_EVENT, options);
     
     return getStory(context);
 };
