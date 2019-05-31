@@ -1,0 +1,35 @@
+{
+    "name": "@dreipol/storybook-figma-addon",
+    "version": "0.0.0",
+    "description": "Figma storybook addon to embed private and public figma projects",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "tsc"
+    },
+    "files": [
+        "lib",
+        "register.js"
+    ],
+    "author": "Gianluca Guarini <gianluca.guarini@gmail.com> (http://gianlucaguarini.com)",
+    "license": "MIT",
+    "devDependencies": {
+        "@storybook/components": "^5.0.11",
+        "@storybook/core-events": "^5.0.11",
+        "@types/lodash": "^4.14.132",
+        "@types/node": "^12.0.3",
+        "@types/react": "^16.8.19",
+        "@types/webpack-env": "^1.13.9",
+        "lodash": "^4.17.11",
+        "react": "^16.8.4",
+        "storybook-addon-designs": "^5.1.0",
+        "typescript": "^3.4.5"
+    },
+    "peerDependencies": {
+        "@storybook/addons": "^5.0.0",
+        "storybook-addon-designs": "^5.1.0",
+        "@storybook/components": "^5.0.0",
+        "@storybook/theming": "^5.0.0",
+        "react": ">=16.8.0",
+        "lodash": "^4.17.11"
+    }
+}

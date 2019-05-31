@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "es2015",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "declaration": false,
+        "declarationMap": false,
+        "sourceMap": true,
+        "downlevelIteration": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "outDir": "lib",
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "moduleResolution": "node"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib"
+    ]
+}
