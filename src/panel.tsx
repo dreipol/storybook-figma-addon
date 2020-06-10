@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
 import React, { Fragment, ReactElement, useEffect, useState } from 'react';
 import { STORY_CHANGED, STORY_RENDERED } from '@storybook/core-events';
-import { ImageConfig } from 'storybook-addon-designs/lib/config';
+import { ImageConfig } from 'storybook-addon-designs/esm/config';
 // @ts-ignore
 import { Placeholder, TabsState } from '@storybook/components';
-import ImagePreview from 'storybook-addon-designs/lib/register/components/Image';
+import ImagePreview from 'storybook-addon-designs/esm/register/components/Image';
 import { loadFigmaImagesByIDs } from './util';
 
 import { Channel } from '@storybook/channels';
