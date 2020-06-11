@@ -35,11 +35,11 @@
         "@types/webpack-env": "^1.13.9",
         "lodash": "^4.17.11",
         "react": "^16.8.4",
-        "storybook-addon-designs": "^5.1.0",
+        "storybook-addon-designs": "^5.2.1",
         "typescript": "^3.4.5"
     },
     "peerDependencies": {
-        "storybook-addon-designs": "^5.1.0",
+        "storybook-addon-designs": "^5.2.1",
         "react": ">=16.8.0"
     }
 }
