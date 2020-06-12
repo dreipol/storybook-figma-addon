@@ -1,6 +1,6 @@
 {
     "name": "@dreipol/storybook-figma-addon",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Figma storybook addon to embed private and public figma projects",
     "main": "lib/index.js",
     "types": "src/index.d.ts",
