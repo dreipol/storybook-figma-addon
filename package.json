@@ -6,6 +6,7 @@
     "types": "src/index.d.ts",
     "scripts": {
         "build": "tsc",
+        "prepublishOnly": "npm run build",
         "test": "eslint src/*.{ts,tsx}"
     },
     "files": [
