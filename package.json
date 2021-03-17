@@ -1,46 +1,49 @@
 {
-    "name": "@dreipol/storybook-figma-addon",
-    "version": "1.0.1",
-    "description": "Figma storybook addon to embed private and public figma projects",
-    "main": "lib/index.js",
-    "types": "src/index.d.ts",
-    "scripts": {
-        "build": "tsc",
-        "prepublishOnly": "npm run build",
-        "test": "eslint src/*.{ts,tsx}"
-    },
-    "files": [
-        "lib",
-        "src",
-        "register.js"
-    ],
-    "author": "Dreipol <dev@dreipol.ch> (http://dreipol.ch)",
-    "license": "MIT",
-    "dependencies": {
-        "@storybook/addons": "^5.0.0",
-        "@storybook/channels": "^5.0.11",
-        "@storybook/components": "^5.0.11",
-        "@storybook/core-events": "^5.0.11",
-        "lodash": "^4.17.11"
-    },
-    "devDependencies": {
-        "@types/lodash": "^4.14.132",
-        "@types/node": "^12.0.3",
-        "eslint": "^5.16.0",
-        "eslint-plugin-react": "^7.13.0",
-        "@typescript-eslint/eslint-plugin": "^1.9.0",
-        "@typescript-eslint/parser": "^1.9.0",
-        "@dreipol/eslint-config": "^6.0.4",
-        "@dreipol/eslint-config-typescript": "^1.0.0",
-        "@types/react": "^16.8.19",
-        "@types/webpack-env": "^1.13.9",
-        "lodash": "^4.17.11",
-        "react": "^16.8.4",
-        "storybook-addon-designs": "^5.2.1",
-        "typescript": "^3.4.5"
-    },
-    "peerDependencies": {
-        "storybook-addon-designs": "^5.2.1",
-        "react": ">=16.8.0"
-    }
+  "name": "@dreipol/storybook-figma-addon",
+  "version": "1.0.1",
+  "description": "Figma storybook addon to embed private and public figma projects",
+  "main": "lib/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "eslint src/*.{ts,tsx}"
+  },
+  "files": [
+    "lib",
+    "src",
+    "register.js"
+  ],
+  "author": "Dreipol <dev@dreipol.ch> (http://dreipol.ch)",
+  "license": "MIT",
+  "dependencies": {
+    "@storybook/addons": "^5.0.0",
+    "@storybook/channels": "^5.0.11",
+    "@storybook/components": "^5.0.11",
+    "@storybook/core-events": "^5.0.11",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.132",
+    "@types/node": "^12.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "@dreipol/eslint-config": "^6.0.4",
+    "@dreipol/eslint-config-typescript": "^1.0.0",
+    "@types/react": "^16.8.19",
+    "@types/webpack-env": "^1.13.9",
+    "lodash": "^4.17.11",
+    "react": "^16.8.4",
+    "storybook-addon-designs": "^5.2.1",
+    "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "storybook-addon-designs": "^5.2.1",
+    "react": ">=16.8.0"
+  },
+  "keywords": [
+    "storybook-addon"
+  ]
 }
