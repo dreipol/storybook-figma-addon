@@ -2,10 +2,13 @@
     "name": "@dreipol/storybook-figma-addon",
     "version": "1.0.1",
     "description": "Figma storybook addon to embed private and public figma projects",
-    "main": "lib/index.js",
-    "types": "src/index.d.ts",
+    "main": "lib/cjs/index.js",
+    "module": "lib/esm/index.js",
+    "types": "lib/esm/index.d.ts",
     "scripts": {
-        "build": "tsc",
+        "build": "npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc -p tsconfig.json",
+        "build:cjs": "tsc -p tsconfig.cjs.json",
         "prepublishOnly": "npm run build",
         "test": "eslint src/*.{ts,tsx}"
     },
