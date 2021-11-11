@@ -1,1 +1,1 @@
-import './lib/register'
+import './lib/esm/register'

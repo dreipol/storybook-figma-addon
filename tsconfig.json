@@ -10,7 +10,7 @@
         "downlevelIteration": true,
         "strict": true,
         "noImplicitAny": true,
-        "outDir": "lib",
+        "outDir": "lib/esm",
         "strictNullChecks": true,
         "strictFunctionTypes": true,
         "noUnusedLocals": true,
