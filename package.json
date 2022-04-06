@@ -1,5 +1,5 @@
 {
-    "name": "@dreipol/storybook-figma-addon",
+    "name": "@dave/storybook-figma-addon",
     "version": "1.0.1",
     "description": "Figma storybook addon to embed private and public figma projects",
     "main": "lib/index.js",
@@ -14,8 +14,8 @@
         "src",
         "register.js"
     ],
-    "author": "Dreipol <dev@dreipol.ch> (http://dreipol.ch)",
-    "license": "MIT",
+    "author": "fei@dave.com",
+    "license": "NONE",
     "dependencies": {
         "@storybook/addons": "^5.0.0",
         "@storybook/channels": "^5.0.11",
